@@ -211,3 +211,72 @@ button:hover{
 button:active{
     background-color: #2caee0;
 }
+
+@media (max-width: 768px) {
+
+    body {
+        background-size: cover;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Área do login central */
+    #miolo {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #logintela {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Logo */
+    #loginimg img {
+        width: 60%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    /* Campos */
+    #logintextos {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .opt {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    /* Botão */
+    #logar {
+        width: 100%;
+        padding: 12px;
+        font-size: 20px;
+        border-radius: 10px;
+        background-color: #326e73;
+        color: white;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 14px;
+        padding: 20px;
+        text-align: justify;
+        height: auto;
+    }
+}
