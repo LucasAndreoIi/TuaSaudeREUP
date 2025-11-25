@@ -24,14 +24,12 @@ body{
 
 main {
     margin: auto;
-    /* ... Seu background e outras propriedades ... */
     width: 85%;
     padding: 30px;
     text-align: center;
-    /* Adiciona flexbox para alinhar os blocos e permitir quebra de linha */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Distribui os blocos */
+    justify-content: space-around;
 }
 
 #redes{
@@ -132,28 +130,25 @@ footer{
 }
 
 .contsetor {
-    /* Define a largura para que dois ou mais caibam na linha (ajuste conforme o design desejado) */
-    width: 48%; /* Exemplo: 48% para caber dois com espaço de 4% entre eles */
+    width: 48%; 
     height: 300px;
-    margin: 10px 0; /* Margem vertical para separar blocos */
+    margin: 10px 0; 
     border-radius: 20px;
-    overflow: hidden; /* Garante que nada saia do contêiner */
-    position: relative; /* Pai para posicionar elementos absolutos (o link-bloco) */
+    overflow: hidden; 
+    position: relative; 
     text-align: left;
 }
 
-/* Link que envolve todo o conteúdo do bloco */
 .link-bloco {
     display: flex;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: inherit;
-    position: relative; /* Pai para posicionar elementos absolutos */
-    z-index: 1; /* Garante que o link esteja acima */
+    position: relative;
+    z-index: 1; 
 }
 
-/* Efeito de Hover/Active */
 .contsetor:hover {
     cursor: pointer;
     background-color: #c7c6c6;
@@ -166,17 +161,15 @@ footer{
     background-color: #2caee0;
 }
 
-/* --- Bloco com Texto Sobreposto (bloco-principal) --- */
 
 .bloco-principal .link-bloco {
-    /* Usa o link-bloco como container do texto sobreposto */
     display: block; 
 }
 
 .bloco-principal .imagem-fundo {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    object-fit: cover; 
     border-radius: 10px;
 }
 
@@ -186,7 +179,7 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para o texto */
+    background-color: rgba(0, 0, 0, 0.4); 
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -195,7 +188,7 @@ footer{
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 10px;
-    z-index: 2; /* Garante que o texto fique acima da imagem */
+    z-index: 2; 
 }
 
 .bloco-principal .texto-sobreposto h2 {
@@ -212,14 +205,12 @@ footer{
 }
 
 
-/* --- Blocos com Conteúdo Lado a Lado (bloco-secundario e bloco-alternativo) --- */
 
 .bloco-secundario .link-bloco, 
 .bloco-alternativo .link-bloco {
-    display: flex; /* Habilita o Flexbox para alinhar lado a lado */
+    display: flex; 
 }
 
-/* Para inverter a ordem (Imagem à esquerda, Texto à direita) */
 .bloco-alternativo .link-bloco {
     flex-direction: row-reverse;
 }
@@ -228,7 +219,6 @@ footer{
     width: 50%;
     height: 100%;
     padding: 0;
-    /* Remover float: left e width: 50% aqui, pois o flexbox já cuida disso */
 }
 
 .imagem-bloco img {
@@ -245,7 +235,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: #eeeeee; /* Fundo para o texto para destacá-lo */
+    background-color: #eeeeee; 
     border-radius: 10px;
 }
 
@@ -253,38 +243,34 @@ footer{
     color: #133336;
     margin-bottom: 10px;
     text-align: left;
-    height: auto; /* Permite que o H2 tenha altura automática */
+    height: auto; 
 }
 
 .texto-bloco p {
     color: #326e73;
-    font-size: 16px; /* Tamanho da fonte menor para melhor leitura */
+    font-size: 16px; 
     text-align: left;
     height: auto;
     padding: 0;
 }
 
-/* Opcional: Efeito de hover na imagem para blocos lado a lado */
 .imagem-bloco img:hover {
     width: 100%;
     height: 100%;
-    transition: none; /* Remove a transição de escala da imagem individual */
+    transition: none;
     transform: none;
 }
 
-/* --- Media Queries para responsividade --- */
 
 @media (max-width: 992px) {
-    /* Em telas menores (ex: tablets), os blocos ficam um abaixo do outro */
     .contsetor {
-        width: 95%; /* Ocupa quase toda a largura */
+        width: 95%; 
         height: auto;
         margin: 15px 0;
     }
 
-    /* Para blocos lado a lado, em telas menores, ficam um em cima do outro */
     .link-bloco {
-        flex-direction: column !important; /* Força a coluna para todos */
+        flex-direction: column !important; 
     }
 
     .marcacaxa {
@@ -293,7 +279,7 @@ footer{
     }
 
     .imagem-bloco {
-        order: 1; /* Imagem primeiro, depois o texto */
+        order: 1;
     }
     
     .texto-bloco {
@@ -306,4 +292,3 @@ footer{
     }
 }
 
-/* ... Seu CSS de media query para 768px (mantendo ajustes de menu e rodapé) ... */
