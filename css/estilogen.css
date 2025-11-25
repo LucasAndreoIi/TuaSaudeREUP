@@ -1,0 +1,71 @@
+#caixa{
+    display: inline-block;
+    height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#imagem{
+    float: left;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+#texto2{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#comentarios{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.comentario{
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.comentario p{
+    float: left;
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+
+#comentarios img{
+    float: left;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+
+#imagem img{
+    width:50%;
+    height:90%;
+    margin: auto;
+}
+
+
+#texto2 h2{
+    width: 100%;
+    float: left;
+    font-size: 30pt;
+}
+
+#texto2 p{
+    width: 100%;
+    float: left;
+    font-size: 20pt;
+}

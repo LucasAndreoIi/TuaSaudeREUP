@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+}
+
+body{
+    text-align: center;
+    background-image: url('../imgs/punpun/Punpun.png');
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: round;
+    background-color: #a7b9bb;
+}
+
+#cabecalho{
+    margin: auto;
+    background-color: #eeeeee;
+    background-image: url('../imgs/BackGrounds/Fundo\ Poeira.jpg') ;
+    width: 90%;
+    padding: 30px;
+    height: 200px;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+}
+
+main{
+    margin: auto;
+    background-color: #d2d7d2;
+    background-image: url('../imgs/BackGrounds/TrianglePunpun.png');
+    width: 85%;
+    padding: 30px;
+    text-align: center;
+}
+
+#redes{
+    text-align: left;
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+
+#pesfoto img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+#pesfoto{
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    float: left;
+}
+
+#cont{
+    margin-top: 20px;
+    margin-left: 30px;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+}
+
+#cont h2{
+    color: #326e73;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+header h2{
+    display: inline-block;
+    color: white;
+    font-size: 30pt;
+    box-sizing: border-box;
+}
+
+.socialmedia{
+    margin-left: 10px;
+}
+
+.socialmedia img{
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#navbar{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#navbar a{
+    color: #326e73;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#navbar a:hover{
+    color: #2caee0;
+    border-radius: 10px;
+}
+
+footer{
+    font-size: 24px;
+    padding: 80px;
+    padding-top:140px;
+    height: 100px;
+    color: white;
+    display: inline-block;
+    background-color: #010607;
+}
+
+#pesquisa{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+#search-input{
+    border: none;
+    margin-left: 30px;
+    width: 170px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.contsetor{
+    width: 80%;
+    height: 300px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+
+.contsetor img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.contsetor img:hover{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    transition: 100ms;
+    transform: scale(1.05);
+}
+
+.marcacaxa{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+
+.marcacaxa p{
+    width: 100%;
+    height: 80%;
+    color: #326e73;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.marcacaxa h2{
+    color: #133336;
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+}
+
+#contesq{
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+#contdir{
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+
+.contsetor:hover{
+    cursor: pointer;
+    background-color: #c7c6c6;
+    transition: 100ms;
+    transform: scale(1.05);
+}
+
+.contsetor:active{
+    cursor: pointer;
+    background-color: #2caee0;
+}
+
+button{
+    border: none;
+}
+
+button:hover{
+    background-color: #326e73;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: #2caee0;
+}
