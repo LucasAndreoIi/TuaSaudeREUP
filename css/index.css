@@ -106,14 +106,17 @@ header h2{
     border-radius: 10px;
 }
 
-footer{
-    font-size: 24px;
-    padding: 80px;
-    padding-top:140px;
-    height: 100px;
+footer {
+    font-size: 24px; 
+    padding: 80px; 
+    padding-top:140px; 
+    height: auto; 
     color: white;
     display: inline-block;
     background-color: #010607;
+    width: 100%;
+    box-sizing: border-box; 
+    text-align: center; 
 }
 
 #pesquisa{
@@ -292,3 +295,14 @@ footer{
     }
 }
 
+@media (max-width: 768px) {
+    
+    footer {
+        font-size: 14px;
+        padding: 20px;
+        text-align: justify; 
+        height: auto; 
+        display: block; 
+    }
+
+}
