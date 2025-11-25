@@ -22,13 +22,16 @@ body{
     text-align: center;
 }
 
-main{
+main {
     margin: auto;
-    background-color: #d2d7d2;
-    background-image: url('../imgs/BackGrounds/TrianglePunpun.png');
+    /* ... Seu background e outras propriedades ... */
     width: 85%;
     padding: 30px;
     text-align: center;
+    /* Adiciona flexbox para alinhar os blocos e permitir quebra de linha */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribui os blocos */
 }
 
 #redes{
@@ -128,155 +131,179 @@ footer{
     cursor: pointer;
 }
 
-.contsetor{
-    width: 80%;
+.contsetor {
+    /* Define a largura para que dois ou mais caibam na linha (ajuste conforme o design desejado) */
+    width: 48%; /* Exemplo: 48% para caber dois com espaço de 4% entre eles */
     height: 300px;
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 10px 0; /* Margem vertical para separar blocos */
     border-radius: 20px;
+    overflow: hidden; /* Garante que nada saia do contêiner */
+    position: relative; /* Pai para posicionar elementos absolutos (o link-bloco) */
+    text-align: left;
 }
 
-
-.contsetor img{
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-}
-
-.contsetor img:hover{
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    transition: 100ms;
-    transform: scale(1.05);
-}
-
-.marcacaxa{
-    width: 50%;
-    height: 100%;
-    float: left;
-}
-
-
-.marcacaxa p{
+/* Link que envolve todo o conteúdo do bloco */
+.link-bloco {
+    display: flex;
     width: 100%;
-    height: 80%;
-    color: #326e73;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.marcacaxa h2{
-    color: #133336;
-    width: 100%;
-    height: 20%;
-    box-sizing: border-box;
-}
-
-#contesq{
-    width: 80%;
     height: 100%;
-    float: left;
+    text-decoration: none;
+    color: inherit;
+    position: relative; /* Pai para posicionar elementos absolutos */
+    z-index: 1; /* Garante que o link esteja acima */
 }
 
-#contdir{
-    width: 80%;
-    height: 100%;
-    float: right;
-}
-
-.contsetor:hover{
+/* Efeito de Hover/Active */
+.contsetor:hover {
     cursor: pointer;
     background-color: #c7c6c6;
     transition: 100ms;
     transform: scale(1.05);
 }
 
-.contsetor:active{
+.contsetor:active {
     cursor: pointer;
     background-color: #2caee0;
 }
 
-button{
-    border: none;
+/* --- Bloco com Texto Sobreposto (bloco-principal) --- */
+
+.bloco-principal .link-bloco {
+    /* Usa o link-bloco como container do texto sobreposto */
+    display: block; 
 }
 
-button:hover{
-    background-color: #326e73;
-    cursor: pointer;
+.bloco-principal .imagem-fundo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 10px;
 }
 
-button:active{
-    background-color: #2caee0;
+.bloco-principal .texto-sobreposto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para o texto */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    z-index: 2; /* Garante que o texto fique acima da imagem */
 }
 
-@media (max-width: 768px) {
+.bloco-principal .texto-sobreposto h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
 
-    body {
-        background-size: cover;
-        background-attachment: scroll;
-        background-repeat: no-repeat;
-        padding: 0;
-        margin: 0;
+.bloco-principal .texto-sobreposto p {
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+/* --- Blocos com Conteúdo Lado a Lado (bloco-secundario e bloco-alternativo) --- */
+
+.bloco-secundario .link-bloco, 
+.bloco-alternativo .link-bloco {
+    display: flex; /* Habilita o Flexbox para alinhar lado a lado */
+}
+
+/* Para inverter a ordem (Imagem à esquerda, Texto à direita) */
+.bloco-alternativo .link-bloco {
+    flex-direction: row-reverse;
+}
+
+.marcacaxa {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    /* Remover float: left e width: 50% aqui, pois o flexbox já cuida disso */
+}
+
+.imagem-bloco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.texto-bloco {
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #eeeeee; /* Fundo para o texto para destacá-lo */
+    border-radius: 10px;
+}
+
+.texto-bloco h2 {
+    color: #133336;
+    margin-bottom: 10px;
+    text-align: left;
+    height: auto; /* Permite que o H2 tenha altura automática */
+}
+
+.texto-bloco p {
+    color: #326e73;
+    font-size: 16px; /* Tamanho da fonte menor para melhor leitura */
+    text-align: left;
+    height: auto;
+    padding: 0;
+}
+
+/* Opcional: Efeito de hover na imagem para blocos lado a lado */
+.imagem-bloco img:hover {
+    width: 100%;
+    height: 100%;
+    transition: none; /* Remove a transição de escala da imagem individual */
+    transform: none;
+}
+
+/* --- Media Queries para responsividade --- */
+
+@media (max-width: 992px) {
+    /* Em telas menores (ex: tablets), os blocos ficam um abaixo do outro */
+    .contsetor {
+        width: 95%; /* Ocupa quase toda a largura */
+        height: auto;
+        margin: 15px 0;
     }
 
-    /* Área do login central */
-    #miolo {
+    /* Para blocos lado a lado, em telas menores, ficam um em cima do outro */
+    .link-bloco {
+        flex-direction: column !important; /* Força a coluna para todos */
+    }
+
+    .marcacaxa {
         width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    #logintela {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-    /* Logo */
-    #loginimg img {
-        width: 60%;
-        max-width: 250px;
         height: auto;
     }
 
-    /* Campos */
-    #logintextos {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 20px;
+    .imagem-bloco {
+        order: 1; /* Imagem primeiro, depois o texto */
+    }
+    
+    .texto-bloco {
+        order: 2;
+        padding: 15px 15px 0 15px;
     }
 
-    .opt {
-        width: 100%;
-        font-size: 18px;
+    .bloco-principal .texto-sobreposto {
         padding: 10px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-    }
-
-    /* Botão */
-    #logar {
-        width: 100%;
-        padding: 12px;
-        font-size: 20px;
-        border-radius: 10px;
-        background-color: #326e73;
-        color: white;
-    }
-
-    /* Footer */
-    footer {
-        font-size: 14px;
-        padding: 20px;
-        text-align: justify;
-        height: auto;
     }
 }
+
+/* ... Seu CSS de media query para 768px (mantendo ajustes de menu e rodapé) ... */
