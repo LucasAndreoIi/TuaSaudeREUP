@@ -56,17 +56,66 @@ button:hover {
     background-color: #9fa4a7;
 }
 
+.cadastro-btn {
+    display: block; 
+    margin-top: 20px; 
+    font-size: 14px;
+    color: #326e73; 
+    text-decoration: none;
+    
+    transition: 0.2s;
+}
+
+.cadastro-btn:hover {
+    color: #2caee0; 
+    text-decoration: underline;
+}
+
+.card a {
+    display: block; 
+    margin-bottom: 0;
+}
+
+button {
+    background-color: #2caee0;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #326e73;
+}
+
 @media (max-width: 480px) {
+    body {
+        align-items: center; 
+        justify-content: center;
+    }
     .card {
-        width: 85%;
-        padding: 30px 15px;
+        width: 90%; 
+        max-width: 300px;  
+        padding: 30px 20px;
     }
 
     .card img {
-        width: 100px;
+        width: 90px; 
+        margin: 0 auto 20px auto; 
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px; 
+        font-size: 15px;
+        margin-bottom: 15px;
     }
 
     button {
-        width: 70%;
+        width: 80%; 
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .cadastro-btn {
+        font-size: 13px; 
+        margin-top: 15px; 
     }
 }

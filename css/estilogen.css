@@ -6,6 +6,8 @@
     box-sizing: border-box;
     align-items: flex-start; 
     padding: 20px 0;
+    background-color: #e0e0e0;
+    border-radius: 20px;
 }
 
 #imagem {
