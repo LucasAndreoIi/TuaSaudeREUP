@@ -375,13 +375,81 @@ footer {
 }
 
 @media (max-width: 768px) {
-    
-    footer {
-        font-size: 14px;
-        padding: 20px;
-        text-align: justify; 
-        height: auto; 
-        display: block; 
+   @media (max-width: 768px) {
+    #cabecalho {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px; 
+        border-radius: 0;
+        box-sizing: border-box;
     }
 
+    #redes {
+        height: auto;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        margin-bottom: 30px; 
+    }
+
+    #pesfoto {
+        width: 120px; 
+        height: 120px;
+        margin-bottom: 15px; 
+    }
+
+    #cont {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #cont h2 {
+        margin-bottom: 20px; 
+        width: auto;
+    }
+
+    .socialmedia {
+        margin: 10px 0; 
+        display: block; 
+        width: 30px; 
+    }
+    
+    .socialmedia img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #navbar {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 40px; 
+    }
+    
+    #navbar a.link {
+        width: 90%; 
+        text-align: center;
+        padding: 15px 0; 
+        margin: 5px 0; 
+        border-bottom: 1px solid #ccc; 
+        font-size: 18px; 
+    }
+    
+    #navbar a.link:last-child {
+        border-bottom: none;
+    }
+
+    #pesquisa {
+        width: 90%;
+        margin: 20px auto 0 auto;
+    }
+}
 }
