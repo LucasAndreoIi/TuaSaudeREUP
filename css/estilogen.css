@@ -81,6 +81,35 @@
     color: #326e73;
 }
 
+.dark-mode #miolo {
+    background-color: transparent; 
+}
+
+.dark-mode #caixa {
+    background-color: transparent; 
+}
+
+.dark-mode #texto2 h2 {
+    color: #f5f5f5; 
+}
+
+.dark-mode #texto2 p {
+    color: #66c6ec; 
+}
+
+.dark-mode #comentarios {
+    background-color: transparent; 
+}
+
+.dark-mode .comentario p {
+    color: #c5c5c5; 
+}
+
+.dark-mode body {
+    background-color: #121212; 
+    background-image: none;
+}
+
 @media (max-width: 768px) {
     
     

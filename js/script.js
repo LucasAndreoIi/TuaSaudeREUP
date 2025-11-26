@@ -18,3 +18,41 @@ function buscar() {
 
 }
 
+
+function applyTheme() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    const body = document.body;
+    const icon = document.getElementById('dark-mode-icon');
+    
+    if (isDarkMode) {
+        body.classList.add('dark-mode');
+        icon.textContent = '☀️'; 
+    } else {
+        body.classList.remove('dark-mode');
+        icon.textContent = '🌙';
+    }
+}
+
+function toggleDarkMode() {
+    const body = document.body;
+    const isDarkMode = body.classList.toggle('dark-mode'); 
+    const icon = document.getElementById('dark-mode-icon');
+    
+    if (isDarkMode) {
+        localStorage.setItem('darkMode', 'enabled');
+        icon.textContent = '☀️'; 
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+        icon.textContent = '🌙';
+    }
+}
+
+
+applyTheme();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', toggleDarkMode);
+    }
+});

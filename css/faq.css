@@ -45,6 +45,33 @@
     padding-left: 10px;
 }
 
+.dark-mode #faq-section {
+    background-color: #1e1e1e; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode #faq-section h1 {
+    color: #66c6ec; 
+    border-bottom: 2px solid #03dac6; 
+}
+
+.dark-mode .faq-item {
+    background-color: #2c2c2c; 
+    border-left: 5px solid #66c6ec; 
+}
+
+.dark-mode .faq-item:hover {
+    background-color: #3a3a3a;
+}
+
+.dark-mode .faq-pergunta {
+    color: #e0e0e0; 
+}
+
+.dark-mode .faq-resposta {
+    color: #a0a0a0; 
+}
+
 
 @media (max-width: 768px) {
     #faq-section {
